@@ -106,7 +106,7 @@ app.post("/login", function(req, res){
 app.get("/admin/users", function(req, res){
     const token = req.headers.token;
     jwt.verify(token, process.env.JWT_LOGIN_SECRET, function(err, userDetials){
-        if(err || !userDetials.isAdmin){
+        if(err){
             res.status(401).send("Not authorized to perform this operation");
         }
         else{  

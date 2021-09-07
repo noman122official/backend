@@ -34,7 +34,7 @@ const userSchema = new Schema({
     },
     isAdmin: {
         type : Boolean,
-        default : false
+        default : true
     },
     createdDate : {
         type : Date,
@@ -45,4 +45,4 @@ const userSchema = new Schema({
         default : new Date()
     }
 })
-mongoose.model("User", userSchema, "user");
+mongoose.model("User", userSchema, "user12");
